@@ -1,0 +1,42 @@
+@use "colors"
+@use "fonts"
+
+.link,
+a
+    text-decoration: none
+#html-body
+    a
+        text-decoration: underline
+.link-underline
+    border-bottom: 1px solid colors.getColor("text")
+
+.link,
+.link-underline,
+a
+    transition: color 0.2s ease-in-out
+    color: inherit
+    cursor: pointer
+
+.btn
+    border: 0
+    font-weight: 300
+    font-size: fonts.$font-md
+    padding: 7px 25px
+    cursor: pointer
+    &:hover
+        background: colors.getColor("text-light-2")
+.btn-disabled
+    background: colors.getColor("text-light-2")
+    cursor: not-allowed
+.error
+    color: colors.getColor("accent-dark")
+    font-weight: 500
+.error-msg
+    margin-top: 10px
+
+
+
+
+
+// Language: sass
+// Path: src\style\_typography.sass
